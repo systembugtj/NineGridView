@@ -1,4 +1,12 @@
+# Repackage
+
+1. Upgrade PhotoView.
+2. Bump to latest AS and support lib.
+
 # NineGridView
+
+[![](https://jitpack.io/v/systembugtj/NineGridView.svg)](https://jitpack.io/#systembugtj/NineGridView)
+
 类似QQ空间，微信朋友圈，微博主页等，展示图片的九宫格控件，自动根据图片的数量确定图片大小和控件大小，使用Adapter模式设置图片，对外提供接口回调，支持任意的图片加载框架,如 Glide,ImageLoader,Fresco,xUtils3,Picasso 等，支持点击图片全屏预览大图。
 
 
@@ -15,13 +23,10 @@
 
 ## 1.用法
 使用前，对于Android Studio的用户，可以选择添加:
-```java
-	compile 'com.lzy.widget:ninegridview:0.2.0'
+```gradle
+	implementation 'com.lzy.widget:ninegridview:0.2.0'
 ```
-或者使用
-```java
-    compile project(':ninegridview')
-```
+
 
 ## 2.项目功能
  * 使用Adapter模式设置图片
