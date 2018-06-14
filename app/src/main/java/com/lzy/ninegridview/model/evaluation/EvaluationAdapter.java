@@ -32,7 +32,7 @@ import com.lzy.widget.CircleImageView;
 import java.util.ArrayList;
 import java.util.List;
 
-import butterknife.Bind;
+import butterknife.BindView;
 import butterknife.ButterKnife;
 import butterknife.OnClick;
 
@@ -122,13 +122,13 @@ public class EvaluationAdapter extends BaseAdapter {
     }
 
     class ViewHolder implements View.OnClickListener {
-        @Bind(R.id.tv_content) TextView content;
-        @Bind(R.id.nineGrid) NineGridView nineGrid;
-        @Bind(R.id.tv_username) TextView username;
-        @Bind(R.id.tv_createTime) TextView createTime;
-        @Bind(R.id.rb_grade) RatingBar grade;
-        @Bind(R.id.avatar) CircleImageView avatar;
-        @Bind(R.id.lv_comments) ListView comments;
+        @BindView(R.id.tv_content) TextView content;
+        @BindView(R.id.nineGrid) NineGridView nineGrid;
+        @BindView(R.id.tv_username) TextView username;
+        @BindView(R.id.tv_createTime) TextView createTime;
+        @BindView(R.id.rb_grade) RatingBar grade;
+        @BindView(R.id.avatar) CircleImageView avatar;
+        @BindView(R.id.lv_comments) ListView comments;
 
         private PopupWindow window;
         private PopupWindow editWindow;

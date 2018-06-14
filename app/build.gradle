@@ -1,14 +1,15 @@
 apply plugin: 'com.android.application'
 
 android {
-    compileSdkVersion 24
-    buildToolsVersion "24.0.3"
+    compileSdkVersion 27
+    buildToolsVersion "27.0.3"
 
     defaultConfig {
-        minSdkVersion 14
-        targetSdkVersion 24
+        minSdkVersion 19
+        targetSdkVersion 27
         versionCode 1
         versionName "1.0"
+        multiDexEnabled true
     }
     buildTypes {
         release {
@@ -19,21 +20,28 @@ android {
 }
 
 dependencies {
-    compile fileTree(include: ['*.jar'], dir: 'libs')
-    compile 'com.android.support:appcompat-v7:24.2.1'
-    compile 'com.android.support:recyclerview-v7:24.2.1'
-    compile 'com.jakewharton:butterknife:7.0.1'
-    compile 'com.google.code.gson:gson:2.6.2'
-    compile 'in.srain.cube:ultra-ptr:1.0.11'
-    compile 'com.lzy.net:okhttputils:1.5.2'
-    compile 'com.lzy.widget:view-core:0.2.1'
+    implementation project(':ninegridview')
 
-    compile 'org.xutils:xutils:3.3.36'
-    compile 'com.facebook.fresco:fresco:0.11.0'
-    compile 'com.squareup.picasso:picasso:2.5.2'
-    compile 'com.github.bumptech.glide:glide:3.7.0'
-    compile 'com.nostra13.universalimageloader:universal-image-loader:1.9.5'
+    implementation fileTree(include: ['*.jar'], dir: 'libs')
 
-    //    compile 'com.lzy.widget:ninegridview:+'
-    compile project(':ninegridview')
+    implementation 'com.android.support:appcompat-v7:27.1.1'
+    implementation 'com.android.support:support-v4:27.1.1'
+    implementation 'com.android.support:recyclerview-v7:27.1.1'
+    implementation 'com.android.support:multidex:1.0.3'
+
+    implementation 'com.jakewharton:butterknife:8.8.1'
+    annotationProcessor "com.jakewharton:butterknife-compiler:8.8.1"
+
+    implementation 'com.google.code.gson:gson:2.6.2'
+    implementation 'in.srain.cube:ultra-ptr:1.0.11'
+
+    implementation 'com.lzy.net:okhttputils:1.5.2'
+    implementation 'com.lzy.widget:view-core:0.2.1'
+
+    implementation 'org.xutils:xutils:3.3.36'
+    implementation 'com.facebook.fresco:fresco:1.9.0'
+    implementation 'com.squareup.picasso:picasso:2.5.2'
+    implementation 'com.github.bumptech.glide:glide:3.7.0'
+    implementation 'com.nostra13.universalimageloader:universal-image-loader:1.9.5'
+
 }

@@ -1,6 +1,9 @@
 package com.lzy.ninegridview;
 
 import android.app.Application;
+import android.content.Context;
+import android.support.multidex.MultiDex;
+import android.support.multidex.MultiDexApplication;
 import android.widget.ImageView;
 
 import com.facebook.drawee.backends.pipeline.Fresco;
@@ -21,7 +24,7 @@ import org.xutils.x;
  * 修订历史：
  * ================================================
  */
-public class GApp extends Application {
+public class GApp extends MultiDexApplication {
 
     public static DisplayImageOptions imageLoaderOptions = new DisplayImageOptions.Builder()//
             .showImageOnLoading(R.drawable.ic_default_color)    //设置图片在下载期间显示的图片
@@ -37,6 +40,13 @@ public class GApp extends Application {
             .setLoadingDrawableId(R.drawable.ic_default_color)  //下载中显示的图片
             .setFailureDrawableId(R.drawable.ic_default_color)  //下载失败显示的图片
             .build();                                           //得到ImageOptions对象
+
+
+    @Override
+    protected void attachBaseContext(Context base) {
+        super.attachBaseContext(base);
+        MultiDex.install(this);
+    }
 
     @Override
     public void onCreate() {

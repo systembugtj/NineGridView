@@ -27,15 +27,15 @@ import org.json.JSONObject;
 import java.lang.reflect.Type;
 import java.util.List;
 
-import butterknife.Bind;
+import butterknife.BindView;
 import butterknife.ButterKnife;
 import okhttp3.Request;
 import okhttp3.Response;
 
 public class NewsActivity extends AppCompatActivity {
 
-    @Bind(R.id.tab) PagerSlidingTabStrip tab;
-    @Bind(R.id.viewPager) ViewPager viewPager;
+    @BindView(R.id.tab) PagerSlidingTabStrip tab;
+    @BindView(R.id.viewPager) ViewPager viewPager;
     private View emptyView;
 
     @Override

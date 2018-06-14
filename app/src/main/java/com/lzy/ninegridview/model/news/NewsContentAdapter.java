@@ -18,7 +18,7 @@ import com.lzy.ninegrid.preview.NineGridViewClickAdapter;
 import java.util.ArrayList;
 import java.util.List;
 
-import butterknife.Bind;
+import butterknife.BindView;
 import butterknife.ButterKnife;
 
 /**
@@ -63,11 +63,11 @@ public class NewsContentAdapter extends RecyclerView.Adapter<NewsContentAdapter.
     }
 
     public class PostViewHolder extends RecyclerView.ViewHolder implements View.OnClickListener {
-        @Bind(R.id.title) TextView title;
-        @Bind(R.id.nineGrid) NineGridView nineGrid;
-        @Bind(R.id.desc) TextView desc;
-        @Bind(R.id.pubDate) TextView pubDate;
-        @Bind(R.id.source) TextView source;
+        @BindView(R.id.title) TextView title;
+        @BindView(R.id.nineGrid) NineGridView nineGrid;
+        @BindView(R.id.desc) TextView desc;
+        @BindView(R.id.pubDate) TextView pubDate;
+        @BindView(R.id.source) TextView source;
         private NewsContent item;
         private View itemView;
 

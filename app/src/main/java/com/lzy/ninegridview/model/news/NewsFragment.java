@@ -27,7 +27,7 @@ import java.lang.reflect.Type;
 import java.util.ArrayList;
 import java.util.List;
 
-import butterknife.Bind;
+import butterknife.BindView;
 import butterknife.ButterKnife;
 import in.srain.cube.views.ptr.PtrClassicFrameLayout;
 import in.srain.cube.views.ptr.PtrDefaultHandler;
@@ -46,8 +46,8 @@ import okhttp3.Response;
  */
 public class NewsFragment extends Fragment {
 
-    @Bind(R.id.ptr) PtrClassicFrameLayout ptr;
-    @Bind(R.id.recyclerView) RecyclerView recyclerView;
+    @BindView(R.id.ptr) PtrClassicFrameLayout ptr;
+    @BindView(R.id.recyclerView) RecyclerView recyclerView;
 
     private List<NewsContent> newsContentList;
     private NewsContentAdapter mAdapter;

@@ -24,12 +24,12 @@ import org.xutils.x;
 
 import java.util.ArrayList;
 
-import butterknife.Bind;
+import butterknife.BindView;
 import butterknife.ButterKnife;
 
 public class MainActivity extends AppCompatActivity implements AdapterView.OnItemClickListener, RadioGroup.OnCheckedChangeListener {
 
-    @Bind(R.id.frame) RadioGroup frame;
+    @BindView(R.id.frame) RadioGroup frame;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

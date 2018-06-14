@@ -15,7 +15,7 @@ import com.lzy.ninegridview.model.evaluation.bean.EvaluationReply;
 
 import java.util.List;
 
-import butterknife.Bind;
+import butterknife.BindView;
 import butterknife.ButterKnife;
 
 /**
@@ -66,7 +66,7 @@ public class CommentsAdapter extends BaseAdapter {
     }
 
     static class ViewHolder {
-        @Bind(R.id.tv_reply) TextView reply;
+        @BindView(R.id.tv_reply) TextView reply;
 
         public ViewHolder(View convertView) {
             ButterKnife.bind(this, convertView);

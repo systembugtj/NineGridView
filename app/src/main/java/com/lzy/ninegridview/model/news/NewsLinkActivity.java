@@ -7,12 +7,12 @@ import android.webkit.WebViewClient;
 
 import com.lzy.ninegridview.R;
 
-import butterknife.Bind;
+import butterknife.BindView;
 import butterknife.ButterKnife;
 
 public class NewsLinkActivity extends AppCompatActivity {
 
-    @Bind(R.id.webView) WebView webView;
+    @BindView(R.id.webView) WebView webView;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

@@ -18,7 +18,7 @@ import com.lzy.okhttputils.model.HttpParams;
 
 import java.util.ArrayList;
 
-import butterknife.Bind;
+import butterknife.BindView;
 import butterknife.ButterKnife;
 import in.srain.cube.views.ptr.PtrClassicFrameLayout;
 import in.srain.cube.views.ptr.PtrDefaultHandler;
@@ -28,8 +28,8 @@ import okhttp3.Response;
 
 public class EvaluationActivity extends AppCompatActivity {
 
-    @Bind(R.id.ptr) PtrClassicFrameLayout ptr;
-    @Bind(R.id.listView) ListView listView;
+    @BindView(R.id.ptr) PtrClassicFrameLayout ptr;
+    @BindView(R.id.listView) ListView listView;
 
     private EvaluationAdapter mAdapter;
     private ArrayList<EvaluationItem> data;
